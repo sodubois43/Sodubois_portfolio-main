@@ -1,0 +1,471 @@
+
+/* ========================================
+   PORTFOLIO SOFIANE DUBOIS — POP DESIGN
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #fff9ef;
+    --ink: #20152e;
+    --purple: #713bff;
+    --pink: #ff69b4;
+    --yellow: #ffe66d;
+    --blue: #8be9fd;
+    --white: #ffffff;
+    --radius: 28px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h2::after {
+    content: '.';
+    color: var(--purple);
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.navbar {
+    background: rgba(255, 249, 239, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 2px solid var(--ink);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: var(--ink);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-brand:hover {
+    color: var(--purple);
+}
+
+.navbar .btn {
+    background: var(--purple);
+    color: white;
+    border: 2px solid var(--ink);
+    font-weight: 700;
+    padding: 10px 22px;
+    transition: 0.25s ease;
+}
+
+.navbar .btn:hover {
+    background: var(--yellow);
+    color: var(--ink);
+    transform: rotate(-3deg) scale(1.05);
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+    position: relative;
+    padding: 65px 0;
+    background:
+        radial-gradient(circle at 10% 20%, #ffb9d8 0 9%, transparent 9.5%),
+        radial-gradient(circle at 90% 80%, #c6b5ff 0 12%, transparent 12.5%),
+        var(--bg);
+}
+
+.hero::before {
+    content: 'CRÉER.';
+    position: absolute;
+    top: 25px;
+    right: 4%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 9vw, 8rem);
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(113, 59, 255, 0.15);
+    pointer-events: none;
+    transform: rotate(-7deg);
+}
+
+.glass-card {
+    position: relative;
+    padding: clamp(25px, 5vw, 65px);
+    background: var(--purple);
+    color: white;
+    border: 3px solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: 12px 12px 0 var(--ink);
+    overflow: hidden;
+    animation: appear 0.8s ease both;
+}
+
+.glass-card .display-3 {
+    font-size: clamp(2.5rem, 5.3vw, 4.8rem);
+    line-height: 1.04;
+    letter-spacing: -3px;
+}
+
+.glass-card .lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.glass-card .btn {
+    padding: 12px 22px;
+    font-weight: 700;
+    border: 2px solid white;
+    margin: 5px 5px 5px 0;
+    transition: 0.25s ease;
+}
+
+.glass-card .btn:hover {
+    background: var(--yellow);
+    color: var(--ink);
+    border-color: var(--ink);
+    transform: translateY(-4px) rotate(-2deg);
+}
+
+.hero .glass-card img {
+    border: 5px solid var(--yellow) !important;
+    box-shadow: 9px 9px 0 var(--ink) !important;
+    transition: transform 0.4s ease;
+}
+
+.hero .glass-card img:hover {
+    transform: rotate(4deg) scale(1.03);
+}
+
+/* ========================================
+   COMPÉTENCES
+   ======================================== */
+
+section.py-5 .glass-card {
+    background: var(--white);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--pink);
+}
+
+section.py-5 .glass-card .text-white-50 {
+    color: #5d5268 !important;
+}
+
+.skill-icon {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--ink);
+    border-radius: 22px;
+    background: var(--yellow);
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: 0.3s ease;
+}
+
+/* Masque les images provisoires avec src="#" */
+.skill-icon img {
+    display: none;
+}
+
+.skill-icon::before {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.row.g-5 > div:nth-child(1) .skill-icon {
+    background: var(--pink);
+}
+
+.row.g-5 > div:nth-child(1) .skill-icon::before {
+    content: '✳';
+}
+
+.row.g-5 > div:nth-child(2) .skill-icon {
+    background: var(--blue);
+}
+
+.row.g-5 > div:nth-child(2) .skill-icon::before {
+    content: '⌕';
+}
+
+.row.g-5 > div:nth-child(3) .skill-icon {
+    background: var(--yellow);
+}
+
+.row.g-5 > div:nth-child(3) .skill-icon::before {
+    content: '✦';
+}
+
+.row.g-5 > div:hover .skill-icon {
+    transform: rotate(-8deg) translateY(-5px);
+}
+
+section.py-5 .glass-card h3 {
+    font-size: 1.6rem;
+}
+
+/* ========================================
+   LOGICIELS — BANDEAU ANIMÉ
+   ======================================== */
+
+.software-slider {
+    overflow: hidden;
+    padding: 25px 0;
+    border-color: rgba(32, 21, 46, 0.2) !important;
+    background: var(--yellow);
+}
+
+.software-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 45px;
+    animation: marquee 28s linear infinite;
+}
+
+.software-slider:hover .software-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--ink);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.slide img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.15) rotate(-8deg);
+}
+
+/* ========================================
+   PROJETS
+   ======================================== */
+
+#projets {
+    padding-top: 90px !important;
+    padding-bottom: 100px !important;
+    background:
+        radial-gradient(circle at 90% 10%, #ffcee5 0 100px, transparent 102px),
+        var(--bg);
+}
+
+#projets h2 {
+    display: inline-block;
+    background: var(--yellow);
+    padding: 10px 22px;
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: rotate(-2deg);
+    margin-bottom: 45px !important;
+}
+
+#projets h2::after {
+    content: '';
+}
+
+.portfolio-item {
+    height: 100%;
+    padding: 12px 12px 22px;
+    background: white;
+    border: 2px solid var(--ink);
+    border-radius: 22px;
+    box-shadow: 6px 6px 0 var(--ink);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 11px 11px 0 var(--purple);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #eee7ff;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .img-wrapper img {
+    transform: scale(1.07);
+}
+
+.portfolio-item h5 {
+    color: var(--ink);
+    font-size: 1.35rem;
+    margin: 18px 8px 6px;
+}
+
+.portfolio-item p {
+    display: inline-block;
+    color: var(--purple) !important;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1.3px;
+    margin: 0 8px;
+}
+
+/* ========================================
+   CONTACT
+   ======================================== */
+
+footer {
+    padding: 85px 0;
+    background: var(--ink);
+    color: white;
+    border-top: 7px solid var(--pink);
+}
+
+footer h3 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: var(--yellow);
+    overflow-wrap: anywhere;
+}
+
+footer .container > p {
+    color: #e5dcef !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: white !important;
+    opacity: 1 !important;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--pink) !important;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 767px) {
+    .hero {
+        padding: 35px 0;
+    }
+
+    .hero::before {
+        top: 0;
+        right: 2%;
+    }
+
+    .glass-card {
+        padding: 28px 22px;
+        box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .glass-card .display-3 {
+        letter-spacing: -1.5px;
+    }
+
+    .hero .glass-card img {
+        max-height: 280px !important;
+    }
+
+    section.py-5 .glass-card {
+        padding: 28px !important;
+    }
+
+    #projets {
+        padding-top: 55px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .img-wrapper {
+        height: 230px;
+    }
+
+    footer {
+        padding: 60px 15px;
+    }
+
+    .software-track {
+        gap: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

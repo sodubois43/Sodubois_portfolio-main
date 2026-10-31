@@ -1,0 +1,18 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Lancer mon projet avec Opera",
+            "runtimeExecutable": "C:\\Users\\Sofia\\AppData\\Local\\Programs\\Opera\\opera.exe",
+            "runtimeArgs": [
+                "--user-data-dir=C:\\temp\\opera-debug",
+                "--remote-debugging-port=9222"
+            ],
+            "url": "file:///C:/Users/Sofia/Downloads/Sodubois_portfolio-main/Sodubois_portfolio-main/projetSiteMmi.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
